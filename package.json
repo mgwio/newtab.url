@@ -1,0 +1,32 @@
+{
+  "title": "newtab.url",
+  "name": "newtaburl",
+  "version": "0.0.1",
+  "description": "Restores custom new-tab functionality (\"browser.newtab.url\"-like)",
+  "main": "index.js",
+  "author": "Mika Wu",
+  "engines": {
+    "firefox": ">=38.0a1",
+    "fennec": ">=38.0a1"
+  },
+  "license": "MIT",
+  "preferences": [{
+    "name": "dURL",
+    "title": "browser.newtab.url",
+    "description": "New tab page URL/File location.\n — Built-in — \n\"about:newtab\" (default)\n\"about:blank\"\n\"about:home\".",
+    "type": "string",
+    "value": "about:newtab"
+  },
+  {
+    "name": "dURLreset",
+    "title": "Restore default",
+    "label": "Reset",
+    "type": "control"
+  },
+  {
+    "name": "resetOnUninstall",
+    "title": "Reset on uninstall?",
+    "type": "bool",
+    "value": true
+  }]
+}
