@@ -1,7 +1,7 @@
 {
   "title": "newtab.url",
   "name": "newtaburl",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Restores custom new-tab functionality (\"browser.newtab.url\"-like)",
   "main": "index.js",
   "author": "Mika Wu",
@@ -28,5 +28,12 @@
     "title": "Reset on uninstall?",
     "type": "bool",
     "value": true
+  },
+  {
+    "name": "syncHomeNew",
+    "title": "Sync with Home Page",
+    "description": "Keep your home page synced with your new tab page.",
+    "type": "bool",
+    "value": false
   }]
 }

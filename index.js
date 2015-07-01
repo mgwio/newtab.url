@@ -11,6 +11,8 @@ const dNewtab = {
 	onPrefChange : function(){
 		if (pref.prefs.dURL != 'about:newtab')
 			tabMod.override(pref.prefs.dURL);
+		if (pref.prefs.syncHomeNew)
+			require('sdk/preferences/service').set("browser.startup.homepage", pref.prefs.dURL);
 		//console.log(tabMod._overridden);
 	},
 
