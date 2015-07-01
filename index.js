@@ -28,7 +28,7 @@ exports.main = function() {
 	pref.on('dURLreset', dNewtab.onPrefReset);
 }
 
-exports.onUnload = function() {
-	if (pref.prefs.resetOnUninstall)
+exports.onUnload = function(reason) {
+	if (reason == "disable" && pref.prefs.resetOnUninstall)
 		dNewtab.onPrefReset();
 }
