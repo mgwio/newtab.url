@@ -1,7 +1,7 @@
 {
   "title": "newtab.url",
   "name": "newtaburl",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Restores custom new-tab functionality (\"browser.newtab.url\"-like)",
   "main": "index.js",
   "author": "Mika Wu",
@@ -11,6 +11,7 @@
   },
   "license": "MIT",
   "preferences": [{
+    "hidden": false,
     "name": "dURL",
     "title": "browser.newtab.url",
     "description": "New tab page URL/File location.\n — Built-in — \n\"about:newtab\" (default)\n\"about:blank\"\n\"about:home\".",
@@ -32,7 +33,7 @@
   {
     "name": "syncHomeNew",
     "title": "Sync with Home Page",
-    "description": "Keep your home page synced with your new tab page.",
+    "description": "Keep your new tab page synced with your home page.",
     "type": "bool",
     "value": false
   }]
