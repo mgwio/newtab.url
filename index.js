@@ -7,6 +7,10 @@ const dNewtab = {
 
 	init : function() {
 		this.onPrefChange();
+		home.on("homepage", () => {
+			if (pref.prefs.syncHomeNew)
+				pref.prefs.dURL = home.prefs["homepage"];
+		});
 	},
 
 	onPrefChange : function() {
@@ -23,11 +27,6 @@ const dNewtab = {
 	},
 
 	onHomeSync : function() {
-		home.on("homepage", () => {
-			if (pref.prefs.syncHomeNew)
-				pref.prefs.dURL = home.prefs["homepage"];
-		});
-
 		dNewtab.onPrefChange.call();
 	}
 };
